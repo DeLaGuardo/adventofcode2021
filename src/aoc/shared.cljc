@@ -16,12 +16,9 @@
           acc
           (recur (conj acc item)))))))
 
-(comment
+(defn read-all-lines
+  ([source] (read-all-lines identity source))
+  ([f source]
+   (with-open [rdr (io/reader (io/resource source))]
+     (mapv f (line-seq rdr)))))
 
-  (-> "aoc/day_1.edn"
-      (reader)
-      (read-all)
-      (count))
-
-
-  )
