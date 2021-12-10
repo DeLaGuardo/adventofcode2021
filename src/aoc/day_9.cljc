@@ -53,6 +53,16 @@
 
   (solve-part-1) ;; => 548
 
+  ;; 3.5 msecs
+  (time
+   (dotimes [_ 1000]
+     (solve-part-1)))
+
   (solve-part-2) ;; => 786048
+
+  ;; 15 msecs
+  (time
+   (dotimes [_ 10]
+     (solve-part-2)))
 
   )
